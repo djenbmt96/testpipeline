@@ -14,3 +14,8 @@ phases:
   post_build:
     commands:
       - aws s3 sync dist/ s3://diennt-pipeline --acl 'public-read' --delete
+artifacts:
+  files:
+    - '/'
+  discard-paths: yes
+  base-directory: 'dist*'
