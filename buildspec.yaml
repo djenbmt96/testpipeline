@@ -16,5 +16,7 @@ phases:
       - aws s3 sync dist/ s3://diennt-pipeline --acl 'public-read' --delete
 artifacts:
   files:
-    - '/*'
-  base-directory: 'dist'
+    - '**/*'
+  base-directory: dist
+  name: build-artifact
+  discard-paths: no
