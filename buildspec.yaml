@@ -13,4 +13,4 @@ phases:
       - ng build
   post_build:
     commands:
-      - aws s3 sync dist/ s3://diennt-pipeline --arl 'public-read'
+      - aws s3 sync dist/ s3://diennt-pipeline --acl 'public-read' --delete
