@@ -14,7 +14,7 @@ if [ -d "/var/www/html" ]; then
 fi
 
 # check if the application folder exists
-if [ ! -d "/html" ]; then
+if [ ! -d "/var/www/html" ]; then
   mkdir /var/www/html
 fi
 
