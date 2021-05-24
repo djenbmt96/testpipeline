@@ -9,13 +9,13 @@ fi
 
 # delete /dev folder if it exists,
 # so there are no old/unused files/assets
-if [ -d "/html" ]; then
-  rm -Rf /html
+if [ -d "/var/www/html" ]; then
+  rm -Rf /var/www/html
 fi
 
 # check if the application folder exists
 if [ ! -d "/html" ]; then
-  mkdir /html
+  mkdir /var/www/html
 fi
 
 
