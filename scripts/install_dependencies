@@ -1,3 +1,21 @@
 #!/bin/bash
-yum install -y httpd
+
+# check if httpd is installed,
+# so the CodeDeploy install script can change ownership to apache:apache
+yum list installed | grep httpd &> /dev/null
+if [ $? != 0 ]; then
+    yum install -y httpd
+fi
+
+# delete /dev folder if it exists,
+# so there are no old/unused files/assets
+if [ -d "/html" ]; then
+  rm -Rf /html
+fi
+
+# check if the application folder exists
+if [ ! -d "/html" ]; then
+  mkdir /html
+fi
+
 
