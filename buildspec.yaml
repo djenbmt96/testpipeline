@@ -19,4 +19,3 @@ artifacts:
     - dist/**/*
     - appspec.yml
     - scripts/**/*
-    - package.json
